@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    /* overflow-y: hidden; /* Hide vertical scrollbar */
+    /* overflow-x: hidden; */
+    /* background-color:#5584AC; */
+}
+
+.NavBar {
+    font-family: 'Exo 2', sans-serif;
+    padding: 14px 16px 10px 0px;
+    word-spacing: 70px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #22577E;
+    font-size: xx-large;
+    margin: 0px;
+    color: inherit;
+}  
+.NavBar a{ 
+    /* color: inherit;  */
+    color: #95D1CC;
+    text-decoration: none;
+} 
+
+
+@media screen and (min-width: 1000px) {
+    .NavBar {
+        text-align: center;
+    }
+}
+
+.NavBar a:hover {
+    color: #F6F2D4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .NavBar {
+        font-size: larger;
+    }
+
+    .NavBar a:not(:first-child) {
+        float: left;
+        display: none;
+    }
+
+    .NavBar a.icon {
+        display: block;
+        margin: 0px 15px 0px 0px;
+
+    }
+}
+
+/* Styling icon */
+.NavBar .icon {
+    display: none;
+}
+
+/* When the screen is less than 1000 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the NavBar (.icon) */
+@media screen and (max-width: 1000px) {
+    .NavBar a:not(:first-child) {
+        display: none;
+    }
+
+    .NavBar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the NavBar with JavaScript when the user clicks on the icon. This class makes the NavBar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+    .NavBar.responsive {
+        position: relative;
+    }
+
+    .NavBar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .NavBar.responsive a {
+        float: none;
+        display: block;
+        margin: 15px 30px 10px 15px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}
+
+
+
+/* End of Navigation Bar */
+
+.name-101 {
+    border: 1px solid;
+    padding: 0px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.name-103 {
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Stick No Bills', sans-serif;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #22577E;
+    text-shadow: 1px 1px 2px #5584AC, 0 0 25px #c6e6f8, 0 0 5px #22577E;
+
+}
+
+.name-102 {
+    /* position: relative; */
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .name-103 {
+        font-size: larger;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .name-102 {
+        display: none;
+
+    }
+
+}
+
+
+
+
+/* Middle */
+
+/* CSS FOR BUTTON:- LAPTOP*/
+
+@media screen and (min-width: 1000px) {
+    .middle-101 {
+        margin-top: 3em;
+        padding: 0px 350px 0px 350px;
+    }
+
+    .btn-all {
+        margin: 0px 0px 0px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        word-spacing: 70px;
+        overflow: hidden;
+        background-color: #22577E;
+        text-align: center;
+    }
+
+    .btn-101 {
+        font-size: 1rem;
+        text-transform: capitalize;
+        border: none;
+        background: var(--clr-grey-9);
+        cursor: pointer;
+        transition: var(--transition);
+        letter-spacing: var(--spacing);
+        padding: 20px 0px 20px 0px;
+        color: #95D1CC;
+    }
+}
+
+.btn-101:hover:not(.active) {
+    background: var(--clr-primary-10);
+    color: var(--clr-primary-5);
+    background-color: #5584AC;
+    color: #F6F2D4;
+}
+
+
+
+/*  CSS FOR BUTTON:- MOBILE*/
+@media screen and (max-width: 1000px) {
+    .middle-101 {
+        margin-top: 30em;
+    }
+
+    .btn-all {
+        margin-top: 2rem;
+        padding: 0px 0px 0px 0px;
+        margin: 16px 0px 0px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #22577E;
+        color: #95D1CC;
+
+    }
+
+    .btn-101 {
+        font-size: 1rem;
+        text-transform: capitalize;
+        border: none;
+        background: var(--clr-grey-9);
+        cursor: pointer;
+        transition: var(--transition);
+        letter-spacing: var(--spacing);
+        padding: 1rem 0;
+        color: #95D1CC;
+
+
+    }
+
+    .btn-101:hover:not(.active) {
+        background: var(--clr-primary-10);
+        color: var(--clr-primary-5);
+        background-color: #5584AC;
+        color: #F6F2D4;
+
+    }
+
+}
+
+
+
+/*  */
+
+.content {
+    display: none;
+    border: .2px solid #22577E;
+    padding-bottom: 75px;
+    box-shadow: 5px 10px 18px #95D1CC;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #95D1CC;
+}
+
+.btn-101.active {
+    background: var(--clr-white);
+}
+
+.content.active {
+    display: block;
+}
+
+.jaipur {
+    color: gray;
+}
+
+
+/* footer css */
+.footerhr {
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #22577E;
+
+}
+
+.footer-contact,
+.footer-resume,
+.footer-blog {
+    font-size: x-large;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: inline;
+    margin: 30px 0px 0px 20px;
+    background-color: #5584AC;
+    border-radius: 15px;
+    border: 1px solid;
+    /* color: #95D1CC; */
+    color:#95D1CC;
+}
+
+.footer a{ 
+    color:#95D1CC;
+    text-decoration: none;
+} 
+
+
+#footer-btn-1 {
+    padding: 5px;
+}
+
+#footer-btn-2 {
+    padding: 5px;
+    padding-right: 40px;
+}
+
+#footer-btn-3 {
+    padding: 5px;
+    padding-right: 80px;
+}
+
+/* .footer-contact,
+.footer-resume,
+.footer-blog :hover{
+    /* text-decoration: none; */
+    /* background-color:#888888; */
+/* } */ 
+
+@media screen and (max-width: 1000px) {
+
+    .footer-contact,
+    .footer-resume,
+    .footer-blog {
+        font-size: medium;
+    }
+
+}
+
+
+/* social-link */
+.social-link {
+    text-align: center;
+    margin: 2em;
+    word-spacing: 50px;
+    font-size: x-large;
+    /* border: 1px solid red; */
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 40px;
+    color:#95D1CC;
+}
